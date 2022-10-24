@@ -1,0 +1,22 @@
+[
+  {
+    "name": "First 10 data",
+    "query": "select * from Person limit 10"
+  },
+  {
+    "name": "First 10 data - Asc. Name",
+    "query": "select * from Person order by name limit 10"
+  },
+  {
+    "name": "First 10 data - Desc. Name",
+    "query": "select * from Person order by name desc limit 10"
+  },
+  {
+    "name": "10 data with salary lower than 25000",
+    "query": "select name, salary from Person where salary < 25000 limit 10"
+  },
+  {
+    "name": "10 data with salary greater than 25000",
+    "query": "select name, salary from Person where salary > 25000 limit 10"
+  }
+]
