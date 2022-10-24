@@ -9,8 +9,12 @@
         "pattern": "^.*$"
       },
       "query": {
-        "type": "string",
-        "pattern": "^.*$"
+        "type": "array",
+        "default": [],
+        "items": {
+          "type": "string",
+          "pattern": "^.*$"
+        }
       }
     }
   }

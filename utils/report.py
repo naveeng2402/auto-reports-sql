@@ -1,11 +1,16 @@
 import os
+from typing import Iterator
 
 from jinja2 import Template
 
 
 def generate_report(
     title: str,
-    data: tuple[tuple[str, tuple[str, ...], tuple[tuple[str, ...], ...]], ...],
+    data: Iterator[
+        tuple[
+            str, tuple[tuple[str, tuple[str, ...], tuple[tuple[str, ...], ...]], ...]
+        ],
+    ],
 ) -> None:
 
     with open(
@@ -20,6 +25,8 @@ def generate_report(
     if not os.path.exists(reports_dir):
         os.mkdir(reports_dir)
 
+    # with open(os.path.join(reports_dir, f"{title}.html"), "w+") as f:
+    #     f.write(rendered_html)
     check_and_rename(os.path.join(reports_dir, f"{title}.html"), rendered_html)
 
 

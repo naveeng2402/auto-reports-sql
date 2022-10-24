@@ -16,11 +16,13 @@ def main(queries: tuple[dict[str, str]], report_title: str):
     res = []
     print(f"using {MAX_WORKERS} threads")
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as exe:
-        res = exe.map(lambda args: utils.execute_sql(**args), queries)
+        res = exe.map(
+            lambda args: utils.execute_sql(max_workers=MAX_WORKERS, **args), queries
+        )
 
     """For testing performance"""
     # for query in queries:
-    #     res.append(utils.execute_sql(**query))
+    #     res.append(utils.execute_sql(max_workers=MAX_WORKERS, **query))
 
     utils.generate_report(report_title, res)
 
