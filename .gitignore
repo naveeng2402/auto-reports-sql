@@ -1,7 +1,6 @@
 env
 .vscode
 reports
-db
 .env.local
 
 **/*/*.pyc
