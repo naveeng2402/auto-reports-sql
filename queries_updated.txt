@@ -1,0 +1,26 @@
+[
+  {
+    "name": "SQL Query",
+    "params": {
+      "cols": ["*", "name", "name, salary"],
+      "table": "Person",
+      "where": ["salary > 25000", "salary < 25000"],
+      "order_by": ["name", "salary"]
+    }
+  }
+]
+
+// select * from Person where salary > 25000 order by name
+// select * from Person where salary < 25000 order by name
+// select * from Person where salary < 25000 order by salary
+// select * from Person where salary < 25000 order by salary
+
+// select name from Person where salary > 25000 order by name
+// select name from Person where salary < 25000 order by name
+// select name from Person where salary < 25000 order by salary
+// select name from Person where salary < 25000 order by salary
+
+// select name, salary from Person where salary > 25000 order by name
+// select name, salary from Person where salary < 25000 order by name
+// select name, salary from Person where salary < 25000 order by salary
+// select name, salary from Person where salary < 25000 order by salary

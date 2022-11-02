@@ -1,0 +1,11 @@
+[
+  {
+    "name": "SQL Query",
+    "params": {
+      "cols": ["*", "name", "name, salary"],
+      "table": "Person",
+      "where": ["salary > 25000", "salary < 25000"],
+      "order_by": ["name", "salary"]
+    }
+  }
+]
