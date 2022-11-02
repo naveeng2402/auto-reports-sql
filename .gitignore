@@ -1,6 +1,8 @@
 env
+cli-env
 .vscode
 reports
 .env.local
 
 **/*/*.pyc
+*.egg-info
