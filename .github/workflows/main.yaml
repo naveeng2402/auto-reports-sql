@@ -1,0 +1,23 @@
+name: auto_reports_sql deployment
+
+on:
+  push:
+    branches:
+    - dist
+  pull_request:
+    branches:
+    - dist
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - uses: casperdcl/deploy-pypi@v2
+        with:
+          password: ${{ secrets.PYPI_TOKEN }}
+          pip: wheel -w dist/ --no-deps .
+    
