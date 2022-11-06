@@ -2,6 +2,16 @@ import click
 import click_config_file
 
 
-@click.command()
+@click.group()
 def main():
-    click.echo("This tool is used to automate sql")
+    pass
+
+
+@main.command()
+def execute():
+    click.secho("Executing queries", bg="red")
+
+
+@main.command()
+def generate():
+    click.secho("Generating queries", bg="green")
