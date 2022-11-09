@@ -1,8 +1,11 @@
 env
 cli-env
+cli-test
 .vscode
 reports
 .env.local
+
+config.yml
 
 **/*/*.pyc
 *.egg-info
