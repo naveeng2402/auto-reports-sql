@@ -4,59 +4,76 @@ This is a simple tool to run a set of sql queries and generate a HTML report of 
 
 # How to use the tool
 
-- Clone the repo.
-- Copy `.env` as `.env.local` and replace the values
-  ```
-  TEMPLATES_PATH="Path to templates dir"
-  DB_PATH="Path to database"
-  REPORT_PATH="Path to reports dir"
-  MAX_THREADS=10
-  ```
-  absolute paths are always reliable
-- Create a json file with the following schema
+### Install the tool using pip
 
-  ```json
-  {
-    "type": "array",
-    "items": {
-      "type": "object",
-      "required": ["name", "query"],
-      "properties": {
-        "name": {
+```bash
+pip install auto-reports-sql
+```
+
+### Create a json file with the following schema
+
+```json
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["name", "query"],
+    "properties": {
+      "name": {
+        "type": "string",
+        "pattern": "^.*$"
+      },
+      "query": {
+        "type": "array",
+        "items": {
           "type": "string",
-          "pattern": "^._$"
-        },
-        "query": {
-          "type": "string",
-          "pattern": "^._$"
+          "pattern": "^.*$"
         }
       }
     }
   }
-  ```
+}
+```
 
-  > Example
+> Example
 
-  ```json
-  [
-    {
-      "name": "First 10 data",
-      "query": "select * from Person limit 10"
-    },
-    {
-      "name": "First 10 data - Asc. Name",
-      "query": "select * from Person order by name limit 10"
-    }
-  ]
-  ```
+```json
+[
+  {
+    "name": "First 10 data",
+    "query": [
+      "select * from Person limit 10",
+      "select * from Person order by name desc limit 10"
+    ]
+  }
+]
+```
 
-- run the program with the following command
-  > python main.py [query.json] [report title]
-  ```bash
-  python main.py query.json
-              or
-  python3 main.py query.json
-  ```
+### Run the program with the following command
+
+```
+Usage: auto-reports-sql execute [OPTIONS] QUERIES
+
+Options:
+  -t, --threads INTEGER           No. of threads used for computation
+                                  [default: 10]
+  -rt, --report-title TEXT        Title of the generated report.  [default: Report Title]
+  -d, --db [sqlite|mysql|postgres]
+                                  The database which is used.  [required]
+  -dp, --db-path PATH             Sqlite database path. Only required if the
+                                  database is set to 'sqlite'
+  -h, --host TEXT                 host of the database. Only required if the
+                                  database is not set to 'sqlite'
+  -u, --username TEXT             username to access the database. Only
+                                  required if the database is not set to
+                                  'sqlite'
+  -p, --password TEXT             password of the database. Only required if
+                                  the database is not set to 'sqlite'
+  -n, --db-name TEXT              name of the database. Only required if the
+                                  database is not set to 'sqlite'
+  --config FILE                   Read configuration from FILE.
+  --help                          Show this message and exit.
+```
 
 # Report Examples
 
@@ -64,6 +81,4 @@ This is a simple tool to run a set of sql queries and generate a HTML report of 
 
 # Possible Updates
 
-- Currently the tool is intended to work on `sqlite`, may be updated to other databases
-  > It can be accomplished by writing new context manager
 - Errors in the queries are not taken into account
