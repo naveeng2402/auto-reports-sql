@@ -77,7 +77,7 @@ Options:
 
 # Report Examples
 
-![Screenshot](images/report.jpg)
+![Screenshot](https://github.com/naveeng2402/auto-reports-sql/raw/master/images/report.jpg)
 
 # Possible Updates
 
