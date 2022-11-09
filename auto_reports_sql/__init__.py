@@ -106,6 +106,7 @@ def execute(**kwargs):
     #     res.append(utils.execute_sql(max_workers=MAX_WORKERS, **query))
 
 
+
 @main.command()
 def generate():
     click.secho("Generating queries", bg="green")
