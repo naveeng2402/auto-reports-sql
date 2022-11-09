@@ -5,7 +5,7 @@ with open("readme.md") as f:
 
 setup(
     name="auto-reports-sql",
-    version="1.0.2",
+    version="1.0.3",
     description="This tool automates SQL Reports generation.",
     author="Naveen G",
     url="https://github.com/naveeng2402/auto-reports-sql.git",
