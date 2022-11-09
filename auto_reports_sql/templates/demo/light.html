@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>SQL REPORT</title>
+  </head>
+  <body class="p-4 bg-gray-100">
+    <h1 class="text-center text-3xl mb-8 font-bold text-gray-900">
+      Title of the Report
+    </h1>
+
+    <main class="flex flex-col divide-y divide-gray-500/50">
+      <section class="flex flex-col gap-2 py-8 first:pt-0">
+        <h2 class="text-xl font-semibold text-gray-700">
+          Title of the Query Group
+        </h2>
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col">
+              <div class="flex items-baseline gap-2">
+                <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                  Query:
+                </h3>
+                <p class="text-sm text-gray-400">
+                  select * from Person limit by 100
+                </p>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex items-baseline gap-2">
+                  <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                    Rows :
+                  </h3>
+                  <p class="text-sm text-gray-400">5</p>
+                </div>
+                <div class="flex items-baseline gap-2">
+                  <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                    Columns :
+                  </h3>
+                  <p class="text-sm text-gray-400">5</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="overflow-x-auto shadow-md rounded-md overflow-hidden border-2 border-gray-500/50"
+            >
+              <table class="w-full text-sm text-left text-gray-400">
+                <thead class="text-xs text-gray-500 uppercase bg-gray-200">
+                  <tr class="border-gray-500/50 border-b">
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 1
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 2
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 3
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 4
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 5
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col">
+              <div class="flex items-baseline gap-2">
+                <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                  Query:
+                </h3>
+                <p class="text-sm text-gray-400">
+                  select * from Person limit by 100
+                </p>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex items-baseline gap-2">
+                  <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                    Rows :
+                  </h3>
+                  <p class="text-sm text-gray-400">5</p>
+                </div>
+                <div class="flex items-baseline gap-2">
+                  <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                    Columns :
+                  </h3>
+                  <p class="text-sm text-gray-400">5</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="overflow-x-auto shadow-md rounded-md overflow-hidden border-2 border-gray-500/50"
+            >
+              <table class="w-full text-sm text-left text-gray-400">
+                <thead class="text-xs text-gray-500 uppercase bg-gray-200">
+                  <tr class="border-gray-500/50 border-b">
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 1
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 2
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 3
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 4
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 5
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col gap-2 py-8 first:pt-0">
+        <h2 class="text-xl font-semibold text-gray-700">
+          Title of the Query Group
+        </h2>
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col">
+              <div class="flex items-baseline gap-2">
+                <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                  Query:
+                </h3>
+                <p class="text-sm text-gray-400">
+                  select * from Person limit by 100
+                </p>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex items-baseline gap-2">
+                  <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                    Rows :
+                  </h3>
+                  <p class="text-sm text-gray-400">5</p>
+                </div>
+                <div class="flex items-baseline gap-2">
+                  <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                    Columns :
+                  </h3>
+                  <p class="text-sm text-gray-400">5</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="overflow-x-auto shadow-md rounded-md overflow-hidden border-2 border-gray-500/50"
+            >
+              <table class="w-full text-sm text-left text-gray-400">
+                <thead class="text-xs text-gray-500 uppercase bg-gray-200">
+                  <tr class="border-gray-500/50 border-b">
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 1
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 2
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 3
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 4
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 5
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col">
+              <div class="flex items-baseline gap-2">
+                <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                  Query:
+                </h3>
+                <p class="text-sm text-gray-400">
+                  select * from Person limit by 100
+                </p>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex items-baseline gap-2">
+                  <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                    Rows :
+                  </h3>
+                  <p class="text-sm text-gray-400">5</p>
+                </div>
+                <div class="flex items-baseline gap-2">
+                  <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                    Columns :
+                  </h3>
+                  <p class="text-sm text-gray-400">5</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="overflow-x-auto shadow-md rounded-md overflow-hidden border-2 border-gray-500/50"
+            >
+              <table class="w-full text-sm text-left text-gray-400">
+                <thead class="text-xs text-gray-500 uppercase bg-gray-200">
+                  <tr class="border-gray-500/50 border-b">
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 1
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 2
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 3
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 4
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                    >
+                      Col 5
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                    <td class="py-4 border-l px-6">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                    <td class="py-4 px-6 border-l">data</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

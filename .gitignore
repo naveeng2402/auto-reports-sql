@@ -1,5 +1,6 @@
 env
 cli-env
+cli-test
 .vscode
 reports
 .env.local
