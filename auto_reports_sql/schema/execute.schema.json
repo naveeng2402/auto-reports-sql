@@ -1,0 +1,20 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["name", "query"],
+    "properties": {
+      "name": {
+        "type": "string",
+        "pattern": "^.*$"
+      },
+      "query": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^.*$"
+        }
+      }
+    }
+  }
+}

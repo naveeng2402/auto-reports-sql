@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{{title}}</title>
+  </head>
+  <body class="p-4 bg-gray-100">
+    <h1 class="text-center text-3xl mb-8 font-bold text-gray-900">
+      {{title}}
+    </h1>
+    <main class="flex flex-col divide-y divide-gray-500/50">
+      {% for group_name, results in data %}
+        <section class="flex flex-col gap-2 py-8 first:pt-0">
+          <h2 class="text-xl font-semibold text-gray-700">
+            {{group_name}}
+          </h2>
+          <div class="flex flex-col gap-6">
+            {% for query, col_headers, data in results %}
+              <div class="flex flex-col gap-2">
+                <div class="flex flex-col">
+                  <div class="flex items-baseline gap-2">
+                    <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                      Query:
+                    </h3>
+                    <p class="text-sm text-gray-400">
+                      {{query}}
+                    </p>
+                  </div>
+                  <div class="flex gap-4">
+                    <div class="flex items-baseline gap-2">
+                      <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                        Rows :
+                      </h3>
+                      <p class="text-sm text-gray-400">
+                        {{data|length}}
+                      </p>
+                    </div>
+                    <div class="flex items-baseline gap-2">
+                      <h3 class="text-xs text-gray-500 font-semibold uppercase">
+                        Columns :
+                      </h3>
+                      <p class="text-sm text-gray-400">
+                        {{col_headers|length}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="overflow-x-auto shadow-md rounded-md overflow-hidden border-2 border-gray-500/50"
+                >
+                  <table class="w-full text-sm text-left text-gray-400">
+                    <thead class="text-xs text-gray-500 uppercase bg-gray-200">
+                      <tr class="border-gray-500/50 border-b">
+                        {% for header in col_headers %}
+                          <th
+                            scope="col"
+                            class="py-3 border-l border-gray-500/50 first:border-l-0 px-6"
+                          >
+                            {{header}}
+                          </th>
+                        {% endfor %}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for row in data %}
+                        <tr class="bg-white border-b">
+                          {% for col in row %}
+                            <td class="py-4 border-l px-6">{{col}}</td>
+                          {% endfor %}
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </section>
+      {% endfor %}
+    </main>
+  </body>
+</html>
+
+   
