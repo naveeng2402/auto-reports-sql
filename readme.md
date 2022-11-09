@@ -60,7 +60,7 @@ This is a simple tool to run a set of sql queries and generate a HTML report of 
 
 # Report Examples
 
-![Screenshot](images/report.jpg)
+![Screenshot](https://github.com/naveeng2402/auto-reports-sql/raw/master/images/report.jpg)
 
 # Possible Updates
 
