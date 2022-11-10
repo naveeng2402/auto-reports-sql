@@ -5,14 +5,14 @@ with open("readme.md") as f:
 
 setup(
     name="auto-reports-sql",
-    version="1.0.3",
+    version="1.0.4",
     description="This tool automates SQL Reports generation.",
     author="Naveen G",
     url="https://github.com/naveeng2402/auto-reports-sql.git",
     packages=find_packages(),
+    include_package_data=True,
     long_description_content_type="text/markdown",
     long_description=readme,
-    include_package_data=True,
     license="MIT",
     keywords=[
         "sql",
