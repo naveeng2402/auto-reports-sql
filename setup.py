@@ -32,7 +32,15 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
     ],
-    install_requires=["click", "click-config-file", "jsonschema", "jinja2", "colorama"],
+    install_requires=[
+        "click",
+        "click-config-file",
+        "jsonschema",
+        "jinja2",
+        "colorama",
+        "psycopg2-binary",
+        "mysql-connector-python",
+    ],
     entry_points="""
     [console_scripts]
     auto-reports-sql=auto_reports_sql:main
